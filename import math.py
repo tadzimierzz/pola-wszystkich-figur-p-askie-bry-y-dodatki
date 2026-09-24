@@ -294,14 +294,30 @@ if inp == "start":
 
         if inp == "a":
             print("Twierdzenie Pitagorasa")
+            print("c - oblicz przeciwprostokątną")
+            print("p - oblicz przyprostokątną")
 
-            a = float(input("Podaj a = "))
-            b = float(input("Podaj b = "))
+            inp = input("Wybierz: ").lower().strip()
 
-            c = (a * a + b * b) ** 0.5
+            if inp == "c":
+                a = float(input("Podaj a = "))
+                b = float(input("Podaj b = "))
 
-            print("Przeciwprostokątna c =", c)
+                c = (a * a + b * b) ** 0.5
 
+                print("Przeciwprostokątna c =", c)
+
+            elif inp == "p":
+                c = float(input("Podaj c = "))
+                a = float(input("Podaj a = "))
+
+                b = (c * c - a * a) ** 0.5
+
+                print("Przyprostokątna b =", b)
+
+            else:
+                print("Nie ma takiej komendy")
+            
         elif inp == "b":
             print("Przekątna kwadratu")
 
